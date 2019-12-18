@@ -1,0 +1,17 @@
+Train için
+c:\Syf\keras-retinanet klasöründe 
+python keras_retinanet/bin/train.py csv data/airplane_annotations.csv data/airplane_labels.csv
+
+
+Transfer Learning için 
+python keras_retinanet/bin/train.py --weights snapshots/resnet50_coco_best_v2.1.0.h5 --freeze-backbone csv data/airplane_annotations.csv data/airplane_labels.csv 
+
+training model'den inference model üretmek için
+python keras_retinanet/bin/convert_model.py snapshots/resnet50_csv_02.h5 resnet50_csv_02_inference.h5
+python keras_retinanet/bin/convert_model.py snapshots/resnet50_csv_01_coco.h5 resnet50_csv_01_coco_inference.h5
+
+examples klasörü içinde aşağıdaki komut çalıştırılır.
+Öncesinde bu dosya içindeki aşağıdaki satırdaki resim değiştirilir.
+image = read_image_bgr('airplane901.jpg')
+
+python ResNet50RetinaNet.py
