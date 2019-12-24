@@ -63,7 +63,7 @@ labels_to_names = {0: 'airplane'}
 
 
 # load image
-image = read_image_bgr('airplane911.jpg')
+image = read_image_bgr('airplane947.png')
 
 # copy to draw on
 draw = image.copy()
